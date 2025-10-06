@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: worker-management-system
+  
+  datasource:
+    url: jdbc:postgresql://localhost:5432/studs
+    username: s413122
+    password: m8UzlJueSRkiTf7x
+    driver-class-name: org.postgresql.Driver
+  
+  jpa:
+    database-platform: org.eclipse.persistence.platform.database.PostgreSQLPlatform
+    show-sql: true
+    properties:
+      eclipselink:
+        logging:
+          level: FINE
+        ddl-generation: create-or-extend-tables
+        ddl-generation.output-mode: database
+    open-in-view: false
+
+server:
+  port: 8081
+  
+logging:
+  level:
+    ru.itmo.is.lab1: DEBUG
+    org.springframework: INFO
+    org.eclipse.persistence: INFO
+
